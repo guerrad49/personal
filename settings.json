@@ -1,0 +1,38 @@
+{
+    "workbench.settings.editor": "json",
+    "workbench.colorTheme": "Dark+",
+    "workbench.colorCustomizations": {
+        "editorLineNumber.activeForeground": "#ffff00",
+        "statusBar.background": "#0055ff"
+    },
+
+    "editor.minimap.enabled": false,
+    "editor.wordWrapColumn": 100,
+    "editor.wordWrap": "wordWrapColumn",
+
+    "security.workspace.trust.untrustedFiles": "open",
+
+    // Python settings.
+    // "python.defaultInterpreterPath": "/Users/david_guerra/Programming/python/pogo/.venv",
+    "[python]": {
+        "editor.formatOnType": true
+    },    
+
+    // LaTeX settings.
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    
+    // CMake settings.
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "[cpp]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+        "editor.suggest.insertMode": "replace"
+    },
+}
