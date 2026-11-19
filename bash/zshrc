@@ -12,9 +12,11 @@ export PS1="%F{yellow}%m%f %B%F{red}%1~%f%b $ "
 export CLICOLOR=1
 export LSCOLORS=Gxgxcxdxcxxxxxxxxxxxxx
 
-# For birthdays library.
-export PYTHONPATH=/Users/david_guerra/Programming/c_cpp/birthdays/install/lib
-
 # Common aliases.
-alias ll="ls -l"
 alias tmuxgod="tmux -f tmux/tmux.session.conf attach -t Code"
+
+# Custom functions.
+[[ -f ~/.zsh_functions ]] && source ~/.zsh_functions
+
+# Machine-specific and private overrides.
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

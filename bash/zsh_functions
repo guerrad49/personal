@@ -1,0 +1,18 @@
+# Group directories first in ls -l while preserving colors and flags.
+ll() {
+  local color=0
+  [[ -t 1 ]] && color=1
+
+  CLICOLOR_FORCE=$color command ls -l "$@" | awk '
+    function flush() {
+      if (dirs != "")  { printf "%s", dirs;  dirs = "" }
+      if (files != "") { printf "%s", files; files = "" }
+    }
+    NF == 0 { flush(); print; next }
+    /^total / { print; next }
+    /^d[-r][-w][-xsS][-r][-w][-xsS][-r][-w][-xtT]/ { dirs = dirs $0 ORS; next }
+    /^[-lcbps][-r][-w][-xsS][-r][-w][-xsS][-r][-w][-xtT]/ { files = files $0 ORS; next }
+    { flush(); print }
+    END { flush() }
+  '
+}
