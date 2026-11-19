@@ -15,6 +15,7 @@
     // ==========================================
     // Editor & Text Formatting
     // ==========================================
+    "editor.rulers": [80],
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100,
     
@@ -39,6 +40,15 @@
         "editor.semanticHighlighting.enabled": true,
         "editor.stickyScroll.defaultModel": "foldingProviderModel",
         "editor.suggest.insertMode": "replace"
+    },
+
+    // ==========================================
+    // Markdown Language Settings
+    // ==========================================
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100,
+        "editor.rulers": [100]
     },
 
     // ==========================================
